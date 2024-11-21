@@ -3,19 +3,31 @@
 @tailwind utilities;
 
 :root {
+  --custom-gradient: linear-gradient(180deg, #e4f9e4 0%, #ffffff 100%); 
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #80807D;
+  --hover: #738C79;
+  --Wtext:#ffffff;
+}
+.hover\:custom-hover:hover {
+  color: var(--hover); /* Apply your custom hover color */
+  text-decoration: underline; /* Add underline effect */
+  font-weight: 550;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html, body {
+  height: 100%; 
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: var(--background); 
+  background-size: cover; 
   font-family: Arial, Helvetica, sans-serif;
+  background-position: center; 
 }
