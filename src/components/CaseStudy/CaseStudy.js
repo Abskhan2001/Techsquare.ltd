@@ -214,8 +214,8 @@ const CaseStudy = () => {
             <Image
               src={activePoint.img}
               alt={activePoint.title}
-              width={400} // Fixed width
-              height={300} // Fixed height
+              width={400} 
+              height={300} 
               className="object-cover"
             />
           </div>
