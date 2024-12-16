@@ -5,7 +5,7 @@ import SevpImg from '../../assets/sevp.png';
 import sparksapp from '../../assets/sparksapp.png' 
 import ezpick from "../../assets/ezpick.png";
 import dinvanoapp from "../../assets/divanoapp.png";
-import  carhub from '../../assets/carhub.png'
+import carhub from '../../assets/carhub.png'
 import zappta from '../../assets/zappta.png'
 import gip from '../../assets/gip.png'
 import flygo from '../../assets/flygo.png'
@@ -130,16 +130,16 @@ const CaseStudy = () => {
   const { title, points } = caseStudies[activeTab];
 
   return (
-    <section className="w-[80%] mx-auto py-20">
+    <section className="w-[90%] mx-auto py-20">
       <div className="flex flex-col items-start mb-2">
-  <Image
-    src={vector}
-    alt="Vector"
-    width={170}
-    height={40}
-    className="object-cover mb-4"
-  />
-</div>
+        <Image
+          src={vector}
+          alt="Vector"
+          width={170}
+          height={40}
+          className="object-cover mb-4"
+        />
+      </div>
 
       {/* Heading Section */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12">
@@ -153,7 +153,7 @@ const CaseStudy = () => {
 
       {/* Navbar Section */}
       <nav className="bg-white shadow-md py-4 px-6 rounded-lg flex justify-between items-center mb-12">
-        <ul className="flex space-x-6 text-gray-700">
+        <ul className="flex flex-wrap justify-start space-x-6 text-gray-700">
           {Object.keys(caseStudies).map((key) => (
             <li
               key={key}
@@ -174,7 +174,7 @@ const CaseStudy = () => {
       {/* Content Section */}
       <div className="flex flex-col lg:flex-row gap-12">
         {/* Left Section */}
-        <div className="flex flex-col space-y-8 relative">
+        <div className="flex flex-col space-y-8 relative w-full lg:w-[45%]">
           {/* Centered Vertical Line */}
           <div className="absolute left-10 top-0 rounded-xl bottom-0 w-1 bg-blue-500 transform -translate-x-1/2"></div>
           <ul className="space-y-8 pl-8">
@@ -208,7 +208,7 @@ const CaseStudy = () => {
         </div>
 
         {/* Right Section */}
-        <div className="grid lg:grid-cols-2 gap-6">
+        <div className="grid lg:grid-cols-2 gap-6 w-full lg:w-[50%]">
           {/* Image Column */}
           <div className="rounded-lg overflow-hidden">
             <Image

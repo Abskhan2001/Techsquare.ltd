@@ -10,16 +10,16 @@ const JoinCompaniesSection = ({ backgroundColor = "#F2F4F7" }) => {
   return (
     <section
       style={{ backgroundColor }}
-      className="w-full py-16"
+      className="w-full py-16 overflow-x-hidden"
     >
-      <div className="container mx-auto max-w-screen-lg text-center">
+      <div className="container mx-auto px-4 md:px-8 max-w-full text-center">
         {/* Heading Text */}
-        <h2 className="text-base  text-gray-500 mb-8">
+        <h2 className="text-base text-gray-500 mb-8">
           Join 4,000+ companies already growing
         </h2>
 
         {/* Logos Container */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center">
           <div className="flex items-center justify-center">
             <Image src={logo1} alt="Company Logo 1" width={170} height={50} />
           </div>
@@ -32,7 +32,8 @@ const JoinCompaniesSection = ({ backgroundColor = "#F2F4F7" }) => {
           <div className="flex items-center justify-center">
             <Image src={logo4} alt="Company Logo 4" width={170} height={50} />
           </div>
-          <div className="flex items-center justify-center">
+          {/* Centering the last logo on mobile screens */}
+          <div className="flex items-center justify-center sm:col-span-2 md:col-span-1">
             <Image src={logo5} alt="Company Logo 5" width={170} height={50} />
           </div>
         </div>
