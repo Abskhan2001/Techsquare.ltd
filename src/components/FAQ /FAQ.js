@@ -1,5 +1,49 @@
 import React, { useState } from "react";
 
+const QuestionCard = ({ question, isActive, onClick }) => {
+  return (
+    <div
+      style={{
+        backgroundColor: "#fff",
+        borderRadius: "5px",
+        boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
+        padding: "15px",
+        cursor: "pointer",
+        transition: "transform 0.3s",
+        display: "flex",
+        alignItems: "center",
+      }}
+      onClick={onClick}
+      aria-expanded={isActive} // Accessibility
+    >
+      {/* Plus Icon */}
+      <div
+        style={{
+          fontSize: "18px",
+          fontWeight: "bold",
+          color: "#007BFF",
+          marginRight: "10px",
+          transform: isActive ? "rotate(45deg)" : "rotate(0)",
+          transition: "transform 0.3s",
+        }}
+      >
+        +
+      </div>
+
+      {/* Question */}
+      <p
+        style={{
+          fontSize: "16px",
+          color: "#333",
+          margin: 0,
+        }}
+      >
+        {question}
+      </p>
+    </div>
+  );
+};
+
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -21,13 +65,12 @@ const FAQ = () => {
       style={{
         backgroundColor: "#F2F4F7",
         padding: "50px 20px",
-        width: "100%", // Full-width background
+        width: "100%",
       }}
     >
-      {/* Centered Container */}
       <div
         style={{
-          maxWidth: "1200px", // Matches Navbar width
+          maxWidth: "1200px",
           margin: "0 auto",
         }}
       >
@@ -41,8 +84,8 @@ const FAQ = () => {
           }}
         >
           <div>
-            {/* Small Title */}
-            <h4 className="font-semibold"
+            <h4
+              className="font-semibold"
               style={{
                 textTransform: "uppercase",
                 fontSize: "14px",
@@ -50,10 +93,8 @@ const FAQ = () => {
                 marginBottom: "10px",
               }}
             >
-              FAQ'S
+              FAQs
             </h4>
-
-            {/* Heading */}
             <h2
               style={{
                 fontSize: "24px",
@@ -64,21 +105,18 @@ const FAQ = () => {
             >
               Frequently Asked Questions
             </h2>
-
-            {/* Description */}
             <p
               style={{
                 fontSize: "14px",
                 color: "#555",
               }}
             >
-              We hope this section will help you better understand the issue
-              related to software
+              We hope this section will help you better understand issues
+              related to software.
             </p>
           </div>
-
-          {/* Contact Us Button */}
-          <button className="font-semibold"
+          <button
+            className="font-semibold"
             style={{
               backgroundColor: "var(--ytext)",
               color: "#fff",
@@ -97,50 +135,17 @@ const FAQ = () => {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)", // Two columns
+            gridTemplateColumns: "repeat(2, 1fr)",
             gap: "20px",
           }}
         >
           {questions.map((question, index) => (
-            <div
+            <QuestionCard
               key={index}
-              style={{
-                backgroundColor: "#fff",
-                borderRadius: "5px",
-                boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
-                padding: "15px",
-                display: "flex",
-                alignItems: "center",
-                cursor: "pointer",
-              }}
+              question={question}
+              isActive={activeIndex === index}
               onClick={() => toggleQuestion(index)}
-            >
-              {/* Plus Icon */}
-              <div
-                style={{
-                  fontSize: "18px",
-                  fontWeight: "bold",
-                  color: "#007BFF",
-                  marginRight: "10px",
-                  transform:
-                    activeIndex === index ? "rotate(45deg)" : "rotate(0)",
-                  transition: "transform 0.3s",
-                }}
-              >
-                +
-              </div>
-
-              {/* Question */}
-              <p
-                style={{
-                  fontSize: "16px",
-                  color: "#333",
-                  margin: 0,
-                }}
-              >
-                {question}
-              </p>
-            </div>
+            />
           ))}
         </div>
       </div>
