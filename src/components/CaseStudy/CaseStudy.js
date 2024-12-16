@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import sampleImg from "../../assets/Rectangle.png"; 
-import SevpImg from '../../assets/Sevp.png';
+import SevpImg from '../../assets/sevp.png';
 import sparksapp from '../../assets/sparksapp.png' 
 import ezpick from "../../assets/ezpick.png";
 import dinvanoapp from "../../assets/divanoapp.png";
