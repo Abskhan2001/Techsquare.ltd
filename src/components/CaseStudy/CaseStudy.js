@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import sampleImg from "../../assets/Rectangle.png"; 
-import Jetour from "../../assets/Sevp.png";
+import SevpImg from '../../assets/Sevp.png';
 import sparksapp from '../../assets/sparksapp.png' 
 import ezpick from "../../assets/ezpick.png";
 import dinvanoapp from "../../assets/divanoapp.png";
@@ -29,7 +29,7 @@ features implemented for smartphones, tablets support, customized landing pages 
         label: "Jetour",
         title: "Jetour App",
         description: `Jetour Motors Services Mobile App is designed for the customer to get the advance booking for the services and maintenance form the service center. Sometime customer can track their maintenance record to avoid delays in maintenance.`,
-        img: Jetour,
+        img: SevpImg,
       },
       {
         label: "Ezpick",
