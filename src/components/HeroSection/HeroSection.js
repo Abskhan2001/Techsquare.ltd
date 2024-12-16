@@ -12,14 +12,14 @@ const HeroSection = () => {
        }}> 
       {/* Left Side - Text */}
       <div className="text-left w-1/2 z-10">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">
-          Software Company Award Winning Company Jeddah Looking for a Software Company Jeddah
+        <h1 className="text-5xl font-bold text-black  mb-4">
+          Software Company Award Winning Company Jeddah
         </h1>
-        <p className="text-lg text-gray-600 mb-6">
-          Whetstonez consistently proves amazing results for their clients. Will grow your brand and business.
+        <p className="text-lg w-full mb-6">
+        Looking for a Software company Jeddah?Whetstonez consistently proves amazing results for their clients.Will grow your brand and business.
         </p>
         <button
-          className="py-2 px-6 rounded-md font-bold"
+          className="py-2 rounded-md w-48 h-12 text-xl font-bold"
           style={{
             backgroundColor: "var(--hover)",
             color: "var(--Wtext)",
@@ -30,7 +30,7 @@ const HeroSection = () => {
       </div>
 
       {/* Right Side - Images */}
-      <div className="relative w-1/1">
+      <div className="relative w-1/3">
         {/* Main Hero Image */}
         <Image
           src={heroImage}

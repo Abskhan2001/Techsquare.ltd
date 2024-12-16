@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import contactImage from "../../assets/logo.png"; // Replace with your actual image path
+import contactImage from "../../assets/cimg.png"; // Replace with your actual image path
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -97,7 +97,10 @@ const ContactUs = () => {
 
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600"
+              className="w-full py-3 rounded-lg font-semibold hover:bg-blue-600"  style={{
+                backgroundColor: "var(--hover)",
+                color: "var(--Wtext)",
+              }}
             >
               Send Message
             </button>
@@ -105,12 +108,13 @@ const ContactUs = () => {
         </div>
 
         {/* Right Section */}
-        <div className="w-full lg:w-1/2">
-          <div className="relative w-full h-96">
+        <div className="w-full ml-20 lg:w-1/2">
+          <div className="relative w-full ">
             <Image
               src={contactImage}
               alt="Contact Us Image"
-              layout="fill"
+              height={100}
+              width={380}
               objectFit="cover"
               className="rounded-lg"
             />

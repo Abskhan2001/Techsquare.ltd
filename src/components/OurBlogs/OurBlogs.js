@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import blogImg1 from "../../assets/logo.png"; // Replace with actual image paths
-import blogImg2 from "../../assets/logo.png";
-import blogImg3 from "../../assets/logo.png";
+import blogImg1 from "../../assets/blog1.jpg"; // Replace with actual image paths
+import blogImg2 from "../../assets/ui:ux.jpeg";
+import blogImg3 from "../../assets/blog3.avif";
 
 const blogs = [
   {
@@ -27,10 +27,10 @@ const blogs = [
 
 const OurBlogs = () => {
   return (
-    <section className="w-[80%] mx-auto py-20 bg-gray-50">
+    <section className="w-[80%] mx-auto py-20 ">
       {/* Heading Section */}
       <div className="mb-6">
-        <p className="text-gray-600 text-lg">Blogs</p>
+        <p className="text-ttext font-semibold text-lg">Blogs</p>
         <h2 className="text-3xl font-bold text-gray-800 mt-2">OUR BLOGS</h2>
       </div>
 
@@ -69,8 +69,14 @@ const OurBlogs = () => {
             </div>
 
             {/* Read More Button Positioned at Bottom Left */}
-            <div className="p-4 bg-blue-500 text-white flex justify-start items-center mt-auto">
-              <button className="text-white font-semibold hover:bg-blue-600 p-2 rounded-md">
+            <div className="p-4  text-white flex justify-start items-center mt-auto" 
+           > 
+              <button className="text-white font-semibold hover:bg-blue-600 p-2 rounded-md" 
+              style={{
+                backgroundColor:'var(--ytext)',
+                width:'150'
+              }}
+              >
                 Read More &rarr;
               </button>
             </div>

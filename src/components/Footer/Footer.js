@@ -9,11 +9,11 @@ const Footer = () => {
         {/* Left Section */}
         <div className="flex flex-col w-full lg:w-1/2">
           {/* Logo */}
-          <div className="text-2xl font-bold mb-4">Concept Softworks</div>
+          <div className="text-2xl font-bold mb-4">TechSquare</div>
 
           {/* Description */}
           <p className="text-gray-200 text-sm">
-            Concept Softworks is a software company, we develop custom-built software for clients - covering everything from financial institutions & medical companies all the way to tech companies and government organizations.
+            TechSquare is a software company, we develop custom-built software for clients - covering everything from financial institutions & medical companies all the way to tech companies and government organizations.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ const Footer = () => {
 
         <div className="flex justify-between text-sm">
           {/* Left */}
-          <p>Copyright © 2023 Whetstonez Software company. All rights reserved.</p>
+          <p>Copyright © 2025 TechSquare Software company. All rights reserved.</p>
 
           {/* Right */}
           <div className="flex items-center space-x-2">

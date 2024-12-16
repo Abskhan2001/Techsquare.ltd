@@ -8,7 +8,16 @@
   --foreground: #80807D;
   --hover: #738C79;
   --Wtext:#ffffff;
+  --ytext: #ECBE13;
 }
+.text-ttext {
+  color: var(--ytext);
+}
+.text-ptext{
+  color: var(--foreground)
+}
+
+
 .hover\:custom-hover:hover {
   color: var(--hover); /* Apply your custom hover color */
   text-decoration: underline; /* Add underline effect */

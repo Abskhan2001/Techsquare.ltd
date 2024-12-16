@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import ceoImg from "../../assets/sevp.png"; // Replace with your actual image path
-import teamImg1 from "../../assets/logo.png";
-import teamImg2 from "../../assets/logo.png";
-import teamImg3 from "../../assets/Logo.png";
-import teamImg4 from "../../assets/logo.png";
+import ceoImg from "../../assets/t1.webp"; // Replace with your actual image path
+import teamImg1 from "../../assets/me.png";
+import teamImg3 from "../../assets/ma.jpg";
+import teamImg4 from "../../assets/fat.jpg";
+import teamImg5 from "../../assets/kas.jpg";
+import teamImg2 from "../../assets/sa.png";
 
 const teamData = [
-  { img: teamImg1, name: "Alice Johnson", title: "Designer" },
-  { img: teamImg2, name: "John Doe", title: "Developer" },
-  { img: teamImg3, name: "Emma Watson", title: "Manager" },
-  { img: teamImg4, name: "Michael Brown", title: "Marketer" },
+  { img: teamImg1, name: "Abbas Khan", title: "Chief Operating Officer" },
+  { img: teamImg5, name: "Kasif Khan", title: "Full Stack Developer" },
+  { img: teamImg4, name: "Fatima Zahra", title: "Front-end Developer" },
+  { img: teamImg3, name: "Madiha Abbasi", title: "Hr Manager" },
+  { img: teamImg2, name: "Sunaira", title: "Marketer" },
 ];
 
 const OurTeam = () => {
@@ -32,7 +34,7 @@ const OurTeam = () => {
     <section className="w-[80%] mx-auto py-20">
       {/* Heading Section */}
       <div className="text-center mb-12">
-        <p className="text-gray-600 text-lg">Get to Know</p>
+        <p className="text-ttext font-semibold text-lg">Get to Know</p>
         <h2 className="text-3xl font-bold text-gray-800">Our Founder</h2>
       </div>
 
@@ -66,8 +68,8 @@ const OurTeam = () => {
       {/* Team Section */}
       <div className="flex justify-between items-center mb-6">
         <h3 className="text-2xl font-bold text-gray-800">Our Team</h3>
-        <button className="text-blue-500 hover:text-blue-600 font-semibold">
-          View All &rarr;
+        <button className=" hover:text-blue-600 font-semibold">
+          View All <span className=" text-ttext"> &rarr; </span>
         </button>
       </div>
 
@@ -79,13 +81,14 @@ const OurTeam = () => {
               key={index}
               className="p-4 bg-white shadow-md h-[400px] rounded-lg flex flex-col items-center"
             >
-              <Image
-                src={team.img}
-                alt={team.name}
-                width={150}
-                height={150}
-                className="rounded-full mb-4"
-              />
+             <Image
+  src={team.img}
+  alt={team.name}
+  width={250}
+  height={150}
+  className="mb-4 object-cover"
+  style={{ width: "250px", height: "350px" }}
+/>
               <h4 className="text-lg font-semibold text-gray-800">{team.name}</h4>
               <p className="text-gray-600">{team.title}</p>
             </div>
@@ -96,13 +99,19 @@ const OurTeam = () => {
         <div className="flex justify-end gap-4 mt-4">
           <button
             onClick={handlePrev}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded"
+            className="text-white font-bold py-2 px-4 rounded-xl" 
+            style={{
+              backgroundColor:'var(--ytext)'
+            }}
           >
             &lt;
           </button>
           <button
             onClick={handleNext}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded"
+            className=" text-white font-bold py-2 px-4 rounded-xl"
+            style={{
+              backgroundColor:'var(--ytext)'
+            }}
           >
             &gt;
           </button>

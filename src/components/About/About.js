@@ -11,7 +11,7 @@ const About = () => {
         {/* Left Side */}
         <div className="lg:w-[50%] text-center lg:text-left">
           {/* Small Title */}
-          <h2 className="text-xl font-semibold text-gray-700 mb-4">About</h2>
+          <h2 className="font-semibold text-ttext mb-4">About</h2>
 
           {/* Main Heading */}
           <h3 className="text-4xl font-bold text-gray-800 mb-6">About Our Company</h3>
@@ -20,7 +20,7 @@ const About = () => {
           <div className="space-y-8">
             {/* Row 1 */}
             <div className="flex items-center justify-start space-x-4">
-              <FaRocket className="text-4xl text-blue-500" />
+              <FaRocket className="text-4xl text-ttext" />
               <div>
                 <h4 className="text-xl font-semibold text-gray-800">Innovative Solutions</h4>
                 <p className="text-gray-600">
@@ -31,7 +31,7 @@ const About = () => {
 
             {/* Row 2 */}
             <div className="flex items-center justify-start space-x-4">
-              <FaUsers className="text-4xl text-blue-500" />
+              <FaUsers className="text-4xl text-ttext" />
               <div>
                 <h4 className="text-xl font-semibold text-gray-800">Customer-Centric</h4>
                 <p className="text-gray-600">
@@ -42,7 +42,7 @@ const About = () => {
 
             {/* Row 3 */}
             <div className="flex items-center justify-start space-x-4">
-              <FaShieldAlt className="text-4xl text-blue-500" />
+              <FaShieldAlt className="text-4xl text-ttext" />
               <div>
                 <h4 className="text-xl font-semibold text-gray-800">Security First</h4>
                 <p className="text-gray-600">
@@ -56,7 +56,7 @@ const About = () => {
         {/* Right Side */}
         <div className="lg:w-[40%] relative ">
           {/* Card at the top-left */}
-          <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
+          <div className="p-6 rounded-lg shadow-lg">
             <div className="relative w-full">
               <Image
                 src={cardimg}
@@ -70,8 +70,10 @@ const About = () => {
               <p className="text-gray-600 mb-4">
                 Our mission is to create value for our customers by providing innovative and sustainable solutions.
               </p>
-              <button className="bg-blue-500 text-white px-4 py-2 rounded-lg font-semibold">
-                Learn More
+              <button className=" text-white px-4 py-2 rounded-lg font-semibold"   style={{
+        backgroundColor: 'var(--ytext)',  
+      }}>
+                See More
               </button>
             </div>
           </div>

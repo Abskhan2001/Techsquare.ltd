@@ -1,7 +1,18 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import sampleImg from "../../assets/Rectangle.png"; 
-import  Jetour from "../../assets/Sevp.png"; 
+import Jetour from "../../assets/Sevp.png";
+import sparksapp from '../../assets/sparksapp.png' 
+import ezpick from "../../assets/ezpick.png";
+import dinvanoapp from "../../assets/divanoapp.png";
+import  carhub from '../../assets/carhub.png'
+import zappta from '../../assets/zappta.png'
+import gip from '../../assets/gip.png'
+import flygo from '../../assets/flygo.png'
+import aca from '../../assets/aca.png'
+import chal from '../../assets/chal.png'
+import im from '../../assets/Group.png'
+import vector from '../../assets/Vector.png'
 
 const caseStudies = {
   AppDev: {
@@ -9,27 +20,28 @@ const caseStudies = {
     points: [
       {
         label: "Sparks",
-        title: "Sparks Project",
-        description: `This project showcases our expertise in mobile app development, delivering cutting-edge solutions.`,
-        img: sampleImg,
+        title: "Sparks App",
+        description: `There has been developed a new design of the Spark with new
+features implemented for smartphones, tablets support, customized landing pages and color identification of services.`,
+        img: sparksapp,
       },
       {
         label: "Jetour",
         title: "Jetour App",
-        description: `A comprehensive app tailored to the automotive industry, enhancing user experiences.`,
+        description: `Jetour Motors Services Mobile App is designed for the customer to get the advance booking for the services and maintenance form the service center. Sometime customer can track their maintenance record to avoid delays in maintenance.`,
         img: Jetour,
       },
       {
         label: "Ezpick",
         title: "Ezpick Logistics",
-        description: `An innovative app streamlining logistics operations for better efficiency and tracking.`,
-        img: sampleImg,
+        description: `The School Dismissal software minimizes congestion and wait times, enhances security, provides peace of mind for parents and schools while ensuring a smooth and orderly dismissal process.`,
+        img: ezpick,
       },
       {
         label: "Divano",
         title: "Divano Furniture App",
-        description: `A beautifully designed app for furniture shopping, providing a seamless user experience.`,
-        img: sampleImg,
+        description: `Divano is your go-to destination for chic and comfortable furniture. Explore curated collections, transform your space effortlessly and indulge in a seamless E-commerce experience.`,
+        img: dinvanoapp,
       },
     ],
   },
@@ -37,28 +49,29 @@ const caseStudies = {
     title: "Web Development",
     points: [
       {
-        label: "Landing Page",
-        title: "Landing Page Design",
-        description: `We created a stunning landing page with a focus on user engagement and conversions.`,
-        img: sampleImg,
+        label: "CarHub",
+        title: "CarHub Website",
+        description: `Carhub is a digitalized solution for automotive services enabling
+service providers to give their location, service and price to you under one platform, with an emphasis on improving your experience, quality and convenience when doing your car services. This will include the shops & mobility shops depending on the service provider.`,
+        img: carhub,
       },
       {
-        label: "Corporate Site",
-        title: "Corporate Website",
-        description: `A sleek and professional website designed to represent the corporate brand.`,
-        img: sampleImg,
+        label: "Zappta",
+        title: "Zappta Website",
+        description: `Zappta is introducing a whole new adventurous shopping experience for its customers. Zappta is a global online market-place, where people come together not only to sell, buy and collect the items they love but also have a chance to win their loved products for free.`,
+        img: zappta,
       },
       {
-        label: "Portfolio",
-        title: "Portfolio Website",
-        description: `A personalized portfolio website to showcase creative work and attract new clients.`,
-        img: sampleImg,
+        label: "Gip Capital",
+        title: "Gip Capital Website",
+        description: `There has been developed a new design of GIB Capital. The main activity of GIB Capital is providing a full range of financial services including the following activities: Dealing as principal, Agent, Underwriter, Arranging, Advising, Managing investment funds, Client’s portfolios and Custody.`,
+        img: gip,
       },
       {
-        label: "E-learning",
-        title: "E-learning Platform",
-        description: `Developed a responsive web platform to facilitate online learning for students globally.`,
-        img: sampleImg,
+        label: "FlyGo",
+        title: "FlyGo website",
+        description: `We're dedicated to making your travel dreams a reality with expertly curated itineraries, local insights and seamless booking options. Explore the world with confidence and ease, thanks to Flygo.`,
+        img: flygo,
       },
     ],
   },
@@ -66,22 +79,22 @@ const caseStudies = {
     title: "UI/UX Design",
     points: [
       {
-        label: "Mobile App UI",
-        title: "Mobile App Interface",
-        description: `Designed an intuitive and user-friendly mobile app interface.`,
-        img: sampleImg,
+        label: "Children World ",
+        title: "Children World International School",
+        description: `Children’s World International Schools is an educational institution that seeks to create leaders and encourage scientific research with updated Arabic minds that can execute the incorporation between knowledge and practice in harmony with the 21st century needs.`,
+        img: chal,
       },
       {
-        label: "Web Dashboard",
-        title: "Web Dashboard Design",
-        description: `Created a visually appealing and functional web dashboard for analytics.`,
-        img: sampleImg,
+        label: "ACA Follow-Up ",
+        title: "App Design",
+        description: `The ACA Follow Up App is a specialized application designed to streamline & monitor student behavior within a school environment tailored for educational institutions. This app allows for efficient tracking and management of student conduct, ensuring a conducive learning atmosphere.`,
+        img: aca,
       },
       {
-        label: "E-commerce UI",
-        title: "E-commerce User Interface",
-        description: `Optimized the user experience for an e-commerce platform to boost conversions.`,
-        img: sampleImg,
+        label: "iMange School",
+        title: "iMange School",
+        description: `iManage School is a streamline administrative tasks and enhance academic efficiency with our comprehensive school management software, designed for seamless communication, efficient resource allocation and holistic student information management.`,
+        img: im,
       },
     ],
   },
@@ -118,6 +131,16 @@ const CaseStudy = () => {
 
   return (
     <section className="w-[80%] mx-auto py-20">
+      <div className="flex flex-col items-start mb-2">
+  <Image
+    src={vector}
+    alt="Vector"
+    width={170}
+    height={40}
+    className="object-cover mb-4"
+  />
+</div>
+
       {/* Heading Section */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12">
         <h2 className="text-3xl font-bold text-gray-800 mb-4 lg:mb-0">
@@ -158,7 +181,7 @@ const CaseStudy = () => {
             {points.map((point, index) => (
               <li
                 key={index}
-                className="flex items-center  cursor-pointer"
+                className="flex items-center cursor-pointer"
                 onClick={() => setActivePoint(point)}
               >
                 <span
@@ -168,7 +191,7 @@ const CaseStudy = () => {
                 ></span>
                 <p
                   className={`text-gray-800 mt-16 ${
-                    activePoint.label === point.label ? "font-bold text-blue-500" : ""
+                    activePoint.label === point.label ? "font-bold text-ttext" : ""
                   }`}
                   style={{
                     width: "200px", // Fixed width for all text
@@ -177,7 +200,6 @@ const CaseStudy = () => {
                     textOverflow: "ellipsis", // Add ellipsis for overflowed text
                   }}
                 >
-                  {point.label}
                   {point.label}
                 </p>
               </li>
@@ -189,18 +211,20 @@ const CaseStudy = () => {
         <div className="grid lg:grid-cols-2 gap-6">
           {/* Image Column */}
           <div className="rounded-lg overflow-hidden">
-  <Image
-    src={activePoint.img}
-    alt={activePoint.title}
-    width={400} // Fixed width
-    height={300} // Fixed height
-    className="object-cover"
-  />
-</div>
+            <Image
+              src={activePoint.img}
+              alt={activePoint.title}
+              width={400} // Fixed width
+              height={300} // Fixed height
+              className="object-cover"
+            />
+          </div>
 
           {/* Text Column */}
           <div>
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">{activePoint.title}</h3>
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+              {activePoint.title}
+            </h3>
             <p className="text-gray-600 mb-6">{activePoint.description}</p>
             <button className="bg-blue-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-600">
               Read More
